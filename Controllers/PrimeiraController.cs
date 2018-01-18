@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using WebServicesCidades.Models;
+using System.Linq;
 
 namespace WebServicesCidades.Controllers
 {
@@ -10,6 +11,7 @@ namespace WebServicesCidades.Controllers
     public class PrimeiraController:Controller
     {
         Cidades cidade = new Cidades();
+        DAOCidades dao = new DAOCidades();
 
         /*[HttpGet] //vou requisitar o serviço, mas também estou passando um parâmetro (id)
         public IEnumerable<string> Get(){
