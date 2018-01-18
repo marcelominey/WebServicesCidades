@@ -9,7 +9,7 @@ namespace WebServicesCidades.Models
         public string Estado { get; set; }
         public int Habitantes { get; set; }
 
-        public List<Cidades> Listar(){
+        private List<Cidades> Listar(){ //mudei para PRIVATE, para não atrapalhar DAOCidades
             return new List<Cidades>(){
                 new Cidades{Id=10,Nome="Leme",Estado="SP",Habitantes=154},
                 new Cidades{Id=51,Nome="Curitiba",Estado="PR",Habitantes=547},
